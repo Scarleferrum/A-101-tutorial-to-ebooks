@@ -1,10 +1,10 @@
 此腳本支援將這些參數加入comicinfo.xml
 
 理解其格式
-1. 第一行：參數名稱，每一個在input_v*.xlsx、comicinfo_v*.py、comicinfo.xml都是一樣的
-2. 第二行：Kavita wiki提供的定義，https://wiki.kavitareader.com/guides/metadata/comics/
-3. 第三行：指定格式或無輸入值時的預設格式，存在多元素時，預設用英文逗點分割
-4. 第四行：開發人員或用戶們的備註
+1. 第一欄：參數名稱，每一個在input_v*.xlsx、comicinfo_v*.py、comicinfo.xml都是一樣的
+2. 第二欄：Kavita wiki提供的定義，https://wiki.kavitareader.com/guides/metadata/comics/
+3. 第三欄：指定格式或無輸入值時的預設格式，存在多元素時，預設用英文逗點分割
+4. 第四欄：開發人員或用戶們的備註
 
 | 參數名稱 | Kavita對應欄位 | 格式 | 備註 |
 |:---|:---|:---|:---|
@@ -57,7 +57,7 @@
 - Adults Only 18+
 - X18+
 > 成人
-強烈推薦：
+### 強烈推薦使用以下分級（澳洲分級）：
 - Unknown
 - Rating Pending
 - G
