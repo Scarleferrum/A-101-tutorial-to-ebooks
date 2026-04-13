@@ -2,13 +2,13 @@
 一個基本的epub與cbz電子書製作教學
 
 ## 安裝與使用：
-    本腳本仰賴python、pandas、openpyxl等模組。
-    需具備基礎的程式知識。
+本腳本仰賴python、pandas、openpyxl等模組。
+需具備基礎的程式知識。
 1. 安裝python
 > 一般安裝可從python官網安裝，安裝時請記得一併勾上pip
 > VS code或是其他編譯器也可以安裝
 2. 安裝依賴模組
-```pip install pandas openpyxl```
+    ```pip install pandas openpyxl```
 > 一般安裝透過終端機執行
 > 編譯器則是透過內部終端機執行
 3. 即可執行comicinfo.py
