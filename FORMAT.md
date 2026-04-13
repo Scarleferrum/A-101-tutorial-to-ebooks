@@ -1,10 +1,10 @@
 This script support adding these parameters to comicinfo.xml
 
 To understanding the format
-1st line: parameter name, each of them in input_v*.xlsx, comicinfo_v*.py, and comicinfo.xml are same
-2nd line: defenition in kavita wiki, https://wiki.kavitareader.com/guides/metadata/comics/
-3rd line: specific format or default format if there is no key-in value
-4th line: remarks from dev or users
+1. 1st line: parameter name, each of them in input_v*.xlsx, comicinfo_v*.py, and comicinfo.xml are same
+2. 2nd line: defenition in kavita wiki, https://wiki.kavitareader.com/guides/metadata/comics/
+3. 3rd line: specific format or default format if there is no key-in value
+4. 4th line: remarks from dev or users
 
 - Title
 > Chapter Title
