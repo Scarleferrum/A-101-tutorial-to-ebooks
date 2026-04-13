@@ -1,2 +1,32 @@
-# A-101-tutorial-to-ebooks
-A basic tutorial for making ePub and cbz file.
+# 一個基本的epub與cbz電子書製作教學
+一個基本的epub與cbz電子書製作教學
+
+## 安裝與使用：
+    本腳本仰賴python、pandas、openpyxl等模組。
+    需具備基礎的程式知識。
+1. 安裝python
+> 一般安裝可從python官網安裝，安裝時請記得一併勾上pip
+> VS code或是其他編譯器也可以安裝
+2. 安裝依賴模組
+```pip install pandas openpyxl```
+> 一般安裝透過終端機執行
+> 編譯器則是透過內部終端機執行
+3. 即可執行comicinfo.py
+4. 壓縮完可以使用rename_extension.py將*.zip重新命名為*.cbz
+
+## 其他說明：
+### 對於欄位有疑問可以參考FORMAT.md（英文）或是FORMAT-zh.md（中文）
+
+## 待辦事項：
+### 目前已知問題：部分欄位不填入時，可能導致欄位輸出合併。
+
+# 免責聲明
+## 請注意：
+### 本代碼只是應朋友提問而做的興趣項目（Side Project），不保證代碼兼容性與可靠性。
+### 本代碼主要由AI生成，經過潤飾與調整。
+
+# 請務必備份所有資料！並檢查輸出內容！
+# 請務必備份所有資料！並檢查輸出內容！
+# 請務必備份所有資料！並檢查輸出內容！
+
+### 因為很重要，所以說三遍。
