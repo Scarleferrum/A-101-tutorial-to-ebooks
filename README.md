@@ -10,7 +10,10 @@
 2. 安裝依賴模組
 - 一般安裝透過終端機執行
 - 編譯器則是透過內部終端機執行. 
-`pip install pandas openpyxl`
+請複製下列程式碼於終端機執行. 
+```pip install pandas openpyxl```
+報錯請嘗試：
+```pip3 install pandas openpyxl```
 3. 即可執行comicinfo.py
 4. 壓縮完可以使用rename_extension.py將*.zip重新命名為*.cbz
 
