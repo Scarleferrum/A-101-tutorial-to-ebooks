@@ -6,7 +6,7 @@ To understanding the format
 3. 3rd line: specific format or default format if there is no key-in value
 4. 4th line: remarks from dev or users
 
-| Parameters | Kavita | Format | Remarks |
+| Comicicinfo | Kavita | Format | Remarks |
 |:---        |:---    |:---    |:---     |
 | Title | Chapter Title | No specific format | No remarks yet |
 | Series | Name | No specific format | No remarks yet |
@@ -28,6 +28,7 @@ To understanding the format
 | Characters | Characters(not shown in wiki) | No specific format | No remarks yet |
 | Teams | Teams or Circle(not shown in wiki) | No specific format | No remarks yet |
 | AgeRating | Age Rating | See below | No remarks yet |
+
 Age Rating should follow format below, the series take the highest Age Rating(aka most mature).
 - Unknown
 - Rating Pending
