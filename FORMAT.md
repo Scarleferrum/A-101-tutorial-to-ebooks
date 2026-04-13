@@ -1,10 +1,10 @@
 This script support adding these parameters to comicinfo.xml
 
 To understanding the format
-1. 1st line: parameter name, each of them in input_v*.xlsx, comicinfo_v*.py, and comicinfo.xml are same
-2. 2nd line: defenition in kavita wiki, https://wiki.kavitareader.com/guides/metadata/comics/
-3. 3rd line: specific format or default format if there is no key-in value
-4. 4th line: remarks from dev or users
+1. 1st row: parameter name, each of them in input_v*.xlsx, comicinfo_v*.py, and comicinfo.xml are same
+2. 2nd row: defenition in kavita wiki, https://wiki.kavitareader.com/guides/metadata/comics/
+3. 3rd row: specific format or default format if there is no key-in value
+4. 4th row: remarks from dev or users
 
 | Comicicinfo | Kavita | Format | Remarks |
 |:---        |:---    |:---    |:---     |
@@ -45,7 +45,7 @@ Age Rating should follow format below, the series take the highest Age Rating(ak
 - R18+
 - Adults Only 18+
 - X18+
-### Highly Recommend:
+### Highly Recommend Using:
 - Unknown
 - Rating Pending
 - G
