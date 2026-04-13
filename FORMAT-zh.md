@@ -6,7 +6,7 @@
 3. 第三欄：指定格式或無輸入值時的預設格式，存在多元素時，預設用英文逗點分割
 4. 第四欄：開發人員或用戶們的備註
 
-| 參數名稱 | Kavita對應欄位 | 格式 | 備註 |
+| Comicinfo參數名稱 | Kavita對應欄位 | 格式 | 備註 |
 |:---|:---|:---|:---|
 | Title | 標題 | 無指定格式 | 暫無備註 |
 | Series | 系列 | 無指定格式 | 暫無備註 |
@@ -30,33 +30,21 @@
 | AgeRating | 年齡分級 | 參考下方 | 暫無備註 |
 
 年齡分級應該遵照下方格式，系列會採計最高等級的年齡分級（換言之，年齡最成熟）。
-- Unknown
-> 未知
-- Rating Pending
-> 待分級
-- Early Childhood
-> 幼兒）
-- Everyone
-> 全年齡
-- G
-> 普遍級）
+- Unknown（未知）
+- Rating Pending（待分級）
+- Early Childhood（幼兒）
+- Everyone（全年齡）
+- G（普遍級）
 - Everyone 10+
-- PG
-> 建議家長指導
+- PG（建議家長指導）
 - Kids to Adults
-- Teen
-> 青少年
-- MA15+
-> 15+
-- Mature 17+
-> 17+
-- M
-> 成熟
-- R18+
-> 限制級
+- Teen（青少年）
+- MA15+（15+）
+- Mature 17+（17+）
+- M（成熟）
+- R18+（限制級）
 - Adults Only 18+
-- X18+
-> 成人
+- X18+（成人）
 ### 強烈推薦使用以下分級（澳洲分級）：
 - Unknown
 - Rating Pending
