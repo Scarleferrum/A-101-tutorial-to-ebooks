@@ -14,7 +14,7 @@
 | Count | 出版狀況 | 無指定格式 | 暫無備註 |
 | Summary | 結語 | 無指定格式 | 暫無備註 |
 | Year, Month, Day | 出版日期 | 整數 | 暫無備註 |
-| Writer | 作者 | 無指定格式 | [已確認受文字編碼影響](/#問題排查手冊與comicinfo.xml備份/002.編碼錯誤.md) |
+| Writer | 作者 | 無指定格式 | [已確認受文字編碼影響](/%23問題排查手冊與comicinfo.xml備份/002.編碼錯誤.md) |
 | Penciller, Inker, Colorist, Letterer, CoverArtist, Editor | Penciller, Inker, Colorist, Letterer, CoverArtist, Editor | 預設留空 | 暫無備註 |
 | Publisher | 出版商 | 無指定格式 | 暫無備註 |
 | Genre | 類型 | 無指定格式 | 暫無備註 |
