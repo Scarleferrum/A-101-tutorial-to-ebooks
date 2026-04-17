@@ -36,7 +36,7 @@ def rename_extension(file_path: str, old_ext: str, new_ext: str):
 
 # ✅ plugin-safe
 def run(context=None):
-    output_folder = BASE_DIR / "output"
+    output_folder = BASE_DIR / "模式二輸出"
     rename_extension(str(output_folder), ".zip", ".cbz")
 
 
