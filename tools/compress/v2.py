@@ -3,6 +3,7 @@ import zipfile
 import json
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from pathlib import Path
 
 # ===== 排除規則 =====
 EXCLUDE_FILES = {
@@ -12,6 +13,7 @@ EXCLUDE_FILES = {
 }
 EXCLUDE_PREFIX = "._"
 
+BASE_DIR = Path(__file__).resolve().parents[2]
 
 # ===== 核心工具函數 =====
 def should_exclude(filename):
@@ -40,6 +42,9 @@ def zip_folder(folder_path, zip_path):
 
 
 def zip_folder_gui(folder, output_dir):
+    folder = os.path.abspath(folder)
+    output_dir = os.path.abspath(output_dir)
+
     zip_path = os.path.join(output_dir, os.path.basename(folder) + ".zip")
 
     with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as z:
@@ -53,7 +58,18 @@ def zip_folder_gui(folder, output_dir):
 
 
 # ===== 對外 API =====
-def run_compress(input_dir="output", workers=None, force=False):
+def run_compress(input_dir=None, workers=None, force=False, debug=False):
+    # ===== 路徑解析（核心修正）=====
+    if not input_dir:
+        input_dir = BASE_DIR / "模式二輸出"
+    else:
+        input_dir = Path(input_dir)
+
+    input_dir = input_dir.resolve()
+
+    if debug:
+        print(f"[DEBUG] input_dir = {input_dir}")
+
     if workers is None:
         workers = os.cpu_count() or 4
 
@@ -125,20 +141,23 @@ def output_result(result, fmt):
             print(result["data"])
 
 
-# ===== plugin-safe entry =====
+# ===== plugin-safe entry（關鍵修正）=====
 def run(context=None):
     """
     GUI / pipeline 專用入口
     """
-    input_dir = "output"
-    if context and "input_dir" in context:
-        input_dir = context["input_dir"]
+    input_dir = None
+
+    if context:
+        # ⭐ 兼容你的主程式
+        input_dir = context.get("output_dir") or context.get("input_dir")
 
     return run_compress(input_dir=input_dir)
 
 
 # ===== main（CLI only）=====
 def main():
+    
     args = parse_args()
 
     result = run_compress(
