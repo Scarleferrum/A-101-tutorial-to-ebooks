@@ -28,7 +28,7 @@ def collect_images(src_dir):
     images = []
     for root, _, files in os.walk(src_dir):
         for f in files:
-            if f.lower().endswith((".jpg", ".jpeg", ".png", ".gif")):
+            if f.lower().endswith((".jpg", ".jpeg", ".png", ".webp")):
                 images.append(os.path.join(root, f))
 
     return sorted(images)
