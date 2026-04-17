@@ -8,8 +8,8 @@ from xml.dom import minidom
 # =========================
 BASE_DIR = Path(__file__).resolve().parents[2]
 
-EXCEL_FILE = "input_v2.3.xlsx"
-OUTPUT_DIR = BASE_DIR / "模式二輸出"
+DEFAULT_EXCEL = BASE_DIR / "input_v2.3.xlsx"
+DEFAULT_OUTPUT = BASE_DIR / "模式二輸出"
 
 
 # =========================
@@ -96,12 +96,21 @@ def create_xml(row):
 
 
 # =========================
-# Main
+# 核心執行邏輯（抽出）
 # =========================
-def main():
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+def run_generate(excel_path=None, output_dir=None):
+    excel_path = Path(excel_path) if excel_path else DEFAULT_EXCEL
+    output_dir = Path(output_dir) if output_dir else DEFAULT_OUTPUT
 
-    df = pd.read_excel(EXCEL_FILE)
+    excel_path = excel_path.resolve()
+    output_dir = output_dir.resolve()
+
+    if not excel_path.exists():
+        raise FileNotFoundError(f"Excel 不存在: {excel_path}")
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    df = pd.read_excel(excel_path)
 
     for idx, row in df.iterrows():
         title = row.get("Title")
@@ -111,17 +120,48 @@ def main():
             continue
 
         folder_name = sanitize_folder_name(str(title))
-        target_dir = OUTPUT_DIR / folder_name
+        target_dir = output_dir / folder_name
         target_dir.mkdir(parents=True, exist_ok=True)
 
         xml_root = create_xml(row)
         xml_data = prettify(xml_root)
 
         output_file = target_dir / "comicinfo.xml"
-
         output_file.write_bytes(xml_data)
 
         print(f"✔ 已生成: {output_file}")
+
+    return {
+        "status": "success",
+        "rows": len(df)
+    }
+
+
+# =========================
+# plugin 入口（⭐ 重點）
+# =========================
+def run(context=None):
+    """
+    GUI / pipeline 使用
+    """
+    excel_path = None
+    output_dir = None
+
+    if context:
+        excel_path = context.get("excel_path")
+        output_dir = context.get("output_dir")
+
+    return run_generate(
+        excel_path=excel_path,
+        output_dir=output_dir
+    )
+
+
+# =========================
+# CLI
+# =========================
+def main():
+    return run_generate()
 
 
 if __name__ == "__main__":
