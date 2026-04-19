@@ -5,20 +5,30 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-# ===== 排除規則 =====
+# ==================
+# 排除規則
+
 EXCLUDE_FILES = {
-    ".DS_Store",
-    "Thumbs.db",
-    "desktop.ini",
+    ".DS_Store",# MacOS 系統文件
+    "Thumbs.db",# Windows 系統文件
+    "desktop.ini",# Windows 系統文件
 }
-EXCLUDE_PREFIX = "._"
+
+EXCLUDE_PREFIX = "._"# MacOS 生成的隱藏文件
+
+# ==================
+# 全局常量（根目錄）
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 
-# ===== 核心工具函數 =====
+# ==================
+# 排除指定文件
+
 def should_exclude(filename):
     return filename in EXCLUDE_FILES or filename.startswith(EXCLUDE_PREFIX)
 
+# ==================
+# 壓縮函數
 
 def zip_folder(folder_path, zip_path):
     try:
@@ -39,7 +49,6 @@ def zip_folder(folder_path, zip_path):
             "folder": folder_path,
             "error": str(e)
         }
-
 
 def zip_folder_gui(folder, output_dir):
     folder = os.path.abspath(folder)
