@@ -2,17 +2,17 @@
 一個基本的epub與cbz電子書製作教學
 
 ## 使用說明：
-本腳本仰賴python、pandas、openpyxl、tinkerdnd2等模組。
+本腳本仰賴python、pandas、openpyxl、tkinterdnd2等模組。
 需具備基礎的程式知識。
 1. 安裝python
-- 可從python官網安裝，安裝時請記得一併勾上pip
+- 可從python官網安裝，請確保安裝時請記得一併勾上pip
 2. 安裝依賴模組
 - 透過終端機執行  
 請複製下列程式碼於終端機執行  
-```pip install pandas openpyxl tinkerdnd2```  
+```pip install pandas openpyxl tkinterdnd2```  
 報錯請嘗試：  
-```pip3 install pandas openpyxl tinkerdnd2```
-3. 即可執行comicinfo_gui_v2.3.py
+```pip3 install pandas openpyxl tkinterdnd2```
+3. 即可執行comicinfo_gui_v2.4.3.py
 4. 選擇不同模式搭配不同資料結構進行壓縮
 
 ### 不同模式說明：
@@ -26,7 +26,7 @@
     錯誤格式：  
         1、2、3、4、5⋯⋯99
 - 標題必須填上
-2. 模式二：適合DLsite購買的漫畫，每個社團可能都有不同模式
+2. 模式二：適合DLsite購買的漫畫，每個社團可能都有不同資料結構
 - 需要先完整填寫Excel
 - 檔案夾與資料結構必須自行整理
 - 批量生成.xml與.cbz
