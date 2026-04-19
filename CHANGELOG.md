@@ -10,13 +10,14 @@
     Extract images from *.zip or folders  
     Generate folder and comicinfo.xml according to key-in values  
     Generate *.cbz includes specific images and xml that fits Kavita perfectly
-4. 模式二支援兩個批次步驟  
-    根據Excel內的數值生成comicinfo.xml  
-    將所有的資料夾壓縮並更名以適配Kavita
-5. 將部分功能剝離或轉為可調用腳本
-6. 新增清除輸入功能
-7. 新增設定功能，可以變更輸入格顏色
-8. 新增基本檢查功能，支援檢查指定路徑、設定檔、Excel表格、其他python檔案是否丟失；支援回復指定路徑與Excel表格
+4. Mode 2 supports two batch processing steps  
+    Generate comicinfo.xml based on values in the Excel file  
+    Compress all folders and rename them to be compatible with Kavita
+
+5. Some features have been decoupled or converted into callable scripts
+6. Added a clear input function
+7. Added settings functionality, allowing customization of input field colors
+8. Added basic validation features, including checking for missing specified paths, configuration files, Excel files, and other Python files; also supports restoring specified paths and Excel files
 9. 所有工具更新至v2+
 
 - 2026-04-12 comicinfo.py 1.6
