@@ -6,7 +6,7 @@ This script depends on the following modules: python, pandas, openpyxl, and tkin
 Basic programming knowledge is required.
 
 1. Install python  
-- You can download it from the official python website. Make sure to check the option to install pip during setup.
+- You can download it from the official website of python. Make sure to check the option to install pip during setup.
 
 2. Install dependencies  
 - Run the following command in your terminal  
@@ -15,7 +15,7 @@ Please copy and execute the following code in the terminal
 If you encounter errors, try:  
 ```pip3 install pandas openpyxl tkinterdnd2```
 
-3. Run comicinfo_gui_v2.4.3.py
+3. Run comicinfo_gui_vX.X.X.py
 
 4. Choose different modes based on different data structures for compression
 
